@@ -1,0 +1,7 @@
+Gemfile.lock
+.bundle
+vendor
+
+Tistory-Backup-*.xml
+_in
+attachments

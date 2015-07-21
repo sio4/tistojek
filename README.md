@@ -15,12 +15,52 @@ posts.
 
 ## Installation
 
+`tistojek` is ruby application so you need to install `ruby` and
+some required gems. (`bundler` also used for gem management)
+
+```
+$ sudo apt-get install ruby ruby-dev
+$ sudo apt-get install build-essential
+$ sudo apt-get install zlib1g-dev
+$ sudo gem install bundler --no-ri --no-rdoc
+```
+
+(`nokogiri` gem has native extensions so you need to install compiler
+and zlib dev files.)
+
+then,
+
+```
+$ bundle install --path ./vendor/bundle
+Fetching gem metadata from https://rubygems.org/.........
+Fetching version metadata from https://rubygems.org/..
+Installing mini_portile 0.6.2
+Installing nokogiri 1.6.6.2 with native extensions
+Installing reverse_markdown 0.8.2
+Using bundler 1.10.5
+Bundle complete! 2 Gemfile dependencies, 4 gems now installed.
+Bundled gems are installed into ./vendor/bundle.
+$ 
+```
+
+OK, installation done!
 
 ## Usage
 
+Now, you can run `tistojek` like below:
+
+```
+$ bundle exec ./tistojek.rb Tistory-Backup-20150721.xml 
+Input: Tistory-Backup-20150721.xml
+Read 7751254 Byte from Tistory-Backup-20150721.xml.
+<...>
+$ 
+```
 
 ## Limitation
 
+* Comments are not supported
+* Some embedded images are not converted to markdown.
 
 ## License
 
